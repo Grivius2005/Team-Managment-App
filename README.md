@@ -1,5 +1,5 @@
-# team-managment-app (Zespol)
+# Description
 
-### Application for team managment written in C#
-
-The only language of app is Polish.
+Original app name - "Zespol"
+School desktop app for managing team written in C# (WPF).
+App only available in Polish.
