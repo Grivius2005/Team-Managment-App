@@ -1,0 +1,55 @@
+﻿<Window x:Class="ZespolGUI.OsobaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZespolGUI"
+        mc:Ignorable="d"
+        Title="Dane osoby" Height="540.693" Width="539.911" Icon="icon.png" FontSize="18">
+    <Window.Background>
+        <ImageBrush ImageSource="mainbg.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Label x:Name="lablePesel" Content="Pesel" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,25,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <Label x:Name="lableImie" Content="Imie" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,75,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <Label x:Name="labelNazwisko" Content="Nazwisko" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,125,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <Label x:Name="lableUro" Content="Data urodzenia" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,175,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <Label x:Name="lablePlec" Content="Płeć" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,225,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputPesel" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Margin="196,25,0,0" FontSize="18" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputUro" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Margin="196,175,0,0" FontSize="18"  VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputImie" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Margin="196,75,0,0" FontSize="18"  VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputNazwisko" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Margin="196,125,0,0" FontSize="18"  VerticalContentAlignment="Center"/>
+        <ComboBox x:Name="inputPlec" HorizontalAlignment="Left" VerticalAlignment="Top" Width="316" Margin="196,225,0,0" Height="35" Cursor="Hand">
+            <ComboBoxItem>Mężczyzna</ComboBoxItem>
+            <ComboBoxItem>Kobieta</ComboBoxItem>
+        </ComboBox>
+        <Button x:Name="accept" Content="Zatwierdź" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="10,425,0,0" Height="55" FontSize="24" Click="accept_Click" Cursor="Hand">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00FFE8" Offset="0"/>
+                    <GradientStop Color="Lime" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="cancel" Content="Anuluj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Margin="287,425,0,0" Height="55" FontSize="24" Click="cancel_Click" Cursor="Hand">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00FFE8" Offset="0"/>
+                    <GradientStop Color="Lime" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="labelDosaStan" Content="Stanowkisko" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,275,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputDosaStan" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Margin="196,275,0,0" FontSize="18"  VerticalContentAlignment="Center"/>
+        <TextBox x:Name="inputZatru" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Margin="196,325,0,0" FontSize="18"  VerticalContentAlignment="Center"/>
+        <Label x:Name="labelZatru" Content="Data zatrudnienia" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,325,0,0" Height="35" Width="181" Foreground="#FF1AFF00" FontFamily="Georgia" FontSize="18"   VerticalContentAlignment="Center"/>
+        <CheckBox x:Name="checkWalipesel" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,379,0,0" Height="15" Width="15" Foreground="#FF1AFF00" VerticalContentAlignment="Center" FontSize="18" Cursor="Hand">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        <Label x:Name="labelWalipesel" Content="Włącz walidacje peselu" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,375,0,0" Height="35" Width="194" Foreground="#FF1AFF00" FontFamily="Georgia" PreviewMouseDown="labelWalipesel_Clicked" Cursor="Hand"/>
+
+
+    </Grid>
+</Window>
